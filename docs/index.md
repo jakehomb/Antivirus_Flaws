@@ -6,15 +6,15 @@ The code and content of this repository are intended for strictly educational pu
  
 ## Table of Contents:
  
-- Goal of project
-- Reason for writing this article
-- Targeted Anti-Virus systems explained
-- My (Simplified) understanding of how they work
-- Typical means of obfuscation
-- Background information for my approach
-- Source files explained
-- Results
-- Credits
+- [Goal of project]
+- [Reason for writing this article]
+- [Signature-based AV Definition]
+- [My (Simplified) understanding of how they work]
+- [Typical means of obfuscation]
+- [Background information for my approach]
+- [Source files explained]
+- [Results]
+- [Credits]
 
 ## Goal of the project:
 
@@ -28,7 +28,7 @@ This project was done as a topic for my Information Security course at Western C
 
 ## My simplified understanding of how Anti-virus works:
 
-### Python styled pseudo code to illustrate:
+#### Python styled pseudo code to illustrate:
 
 ## Typical means of obfuscation:
 
@@ -43,3 +43,12 @@ This project was done as a topic for my Information Security course at Western C
 ## Links:
 [1]: https://www.github.com/jakehomb/Antivirus_Flaws/blob/master/README.md
 [2]: https://www.offensive-security.com/information-security-training/cracking-the-perimeter/
+[Goal of project]: ./#goal-of-the-project
+[Reason for writing this article]: ./#reason-for-writing-this-article
+[Signature-based AV Definition]: ./#signature-based-av-definition
+[My (Simplified) understanding of how they work]: ./#my-(simplified)-understanding-of-how-they-work
+[Typical means of obfuscation]: ./#typical-means-of-obfuscation
+[Background information for my approach]: ./#background-information-for-my-approach
+[Source files explained]: ./#source-files-explained
+[Results]: ./#results
+[Credits]: ./#credits
