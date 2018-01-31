@@ -1,9 +1,11 @@
+ ## To view the README for this repository, please click [here.]{https://www.github.com/jakehomb/Antivirus_Flaws/README.md}
  
  ## Disclaimer:
  	
 	The code and content of this repository are intended for strictly educational purposes. If you decide to do something unethical with it or with any of the ideas from it, I am not responsible for any legal consequences. You are responisble for your own actions.
   
  ## Table of Contents:
+ 
 	- Goal of project
 	- Reason for writing this article
 	- Targeted Anti-Virus systems explained
