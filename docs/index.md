@@ -1,4 +1,4 @@
-## To view the README for this repository, please click [here.][1]
+### To view the README for this repository, please click [here.][1]
  
 ## Disclaimer:
  
@@ -22,7 +22,7 @@ The goal of this project was to create a simple method of taking known bad shell
 
 ## Reason for writing:
 
-This project was done as a topic for my Information Security course at Western Connecticut State University. This particular topic was chosen after taking the Cracking the Parimeter course from [Offensive Security]. Using information gained from their courses in addition to some basic work with anti-virus in the IT field, I was able to come up with an idea on what doesn't get caught and why. This led me to a system of automating the generation of what doesnt work for anti-virus and a proof of concept on how to implement it. 
+This project was done as a topic for my Information Security course at Western Connecticut State University. This particular topic was chosen after taking the [Cracking the Perimeter course from Offensive Security][2]. Using information gained from their courses in addition to some basic work with anti-virus in the IT field, I was able to come up with an idea on what doesn't get caught and why. This led me to a system of automating the generation of what doesnt work for anti-virus and a proof of concept on how to implement it. 
 
 ## Signature-based AV Definition:
 
@@ -42,4 +42,4 @@ This project was done as a topic for my Information Security course at Western C
 
 ## Links:
 [1]: https://www.github.com/jakehomb/Antivirus_Flaws/blob/master/README.md
-[Offensive Security]: https://www.offensive-security.com
+[2]: https://www.offensive-security.com/information-security-training/cracking-the-perimeter/
