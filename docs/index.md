@@ -37,4 +37,4 @@
 ## Credits:
 
 ## Links:
-[1]: https://www.github.com/jakehomb/Antivirus_Flaws/README.md
+[1]: github.com/jakehomb/Antivirus_Flaws/blob/master/README.md
