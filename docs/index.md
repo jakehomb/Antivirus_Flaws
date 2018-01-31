@@ -1,4 +1,4 @@
- ## To view the README for this repository, please click [here.]{https://www.github.com/jakehomb/Antivirus_Flaws/README.md}
+ ## To view the README for this repository, please click [here.][1]
  
  ## Disclaimer:
  	
@@ -37,3 +37,4 @@
 ## Credits:
 
 ## Links:
+[1]: https://www.github.com/jakehomb/Antivirus_Flaws/README.md
