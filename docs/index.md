@@ -41,7 +41,7 @@ This project was done as a topic for my Information Security course at Western C
 ## Credits:
 
 ## Links:
-[1]: README.md
+[1]: README
 [2]: https://www.offensive-security.com/information-security-training/cracking-the-perimeter/
 [Goal of project]: ./#goal-of-the-project
 [Reason for writing this article]: ./#reason-for-writing-this-article
