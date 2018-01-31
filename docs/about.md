@@ -26,5 +26,6 @@ Copy and paste the relevant output into the skeletonized POC
 
 	-Visual Studio Community 2017
 	-Python 3.6.4
+
 [scramblePayload.py]: https://github.com/jakehomb/Antivirus_Flaws/blob/master/scramblePayload.py
 [AVBypass_POC.cpp]: https://github.com/jakehomb/Antivirus_Flaws/blob/master/AVBypass_Skeletonized.cpp
