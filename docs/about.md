@@ -1,4 +1,4 @@
-## Antivirus Flaws
+## [Antivirus Flaws]
 
 This repository contains source code and documentation for a proof of concept on how trivial it is to take known malicious code as shellcode and structures them in such a way that the bytes of the malicious code will not match the antivirus signature known and associated with it.
 
@@ -29,3 +29,4 @@ Copy and paste the relevant output into the skeletonized POC
 
 [scramblePayload.py]: https://github.com/jakehomb/Antivirus_Flaws/blob/master/scramblePayload.py
 [AVBypass_POC.cpp]: https://github.com/jakehomb/Antivirus_Flaws/blob/master/AVBypass_Skeletonized.cpp
+[Antivirus Flaws]: ../
