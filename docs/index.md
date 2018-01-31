@@ -1,4 +1,4 @@
-### To view the README for this repository, please click [here.][1]
+### To view the about for this repository, please click [here.][1]
  
 ## Disclaimer:
  
@@ -31,6 +31,9 @@ Looking at the [most credible resource on the internet], we can see that signatu
 ## My simplified understanding of how Anti-virus works:
 
 #### Python styled pseudo code to illustrate:
+```Python
+Placeholder
+```
 
 ## Typical means of obfuscation:
 
@@ -42,7 +45,8 @@ Looking at the [most credible resource on the internet], we can see that signatu
 
 ## Credits:
 
-## Links:
+[//]: # "LINKS)"
+
 [1]: about
 [2]: https://www.offensive-security.com/information-security-training/cracking-the-perimeter/
 [Goal of project]: ./#goal-of-the-project
