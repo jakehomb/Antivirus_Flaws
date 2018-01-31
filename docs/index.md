@@ -43,7 +43,7 @@ Looking at the [most credible resource on the internet], we can see that signatu
 ## Credits:
 
 ## Links:
-[1]: README.md
+[1]: about
 [2]: https://www.offensive-security.com/information-security-training/cracking-the-perimeter/
 [Goal of project]: ./#goal-of-the-project
 [Reason for writing this article]: ./#reason-for-writing-this-article
