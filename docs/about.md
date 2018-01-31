@@ -29,4 +29,4 @@ Copy and paste the relevant output into the skeletonized POC
 
 [scramblePayload.py]: https://github.com/jakehomb/Antivirus_Flaws/blob/master/scramblePayload.py
 [AVBypass_POC.cpp]: https://github.com/jakehomb/Antivirus_Flaws/blob/master/AVBypass_Skeletonized.cpp
-[Antivirus Flaws]: ../
+[Antivirus Flaws]: https://jakehomb.github.io/Antivirus_Flaws/
