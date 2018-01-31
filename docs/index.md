@@ -26,6 +26,8 @@ This project was done as a topic for my Information Security course at Western C
 
 ## Signature-based AV Definition:
 
+Looking at the [most credible resource on the internet], we can see that signature-based antivirus is dependent on a security firm having some of the malicious software so that they can examine it and add the malicious portion of the code that can be recognized to a signature database. This signature database will be pushed to the anti-virus clients and will 
+
 ## My simplified understanding of how Anti-virus works:
 
 #### Python styled pseudo code to illustrate:
@@ -52,3 +54,4 @@ This project was done as a topic for my Information Security course at Western C
 [Source files explained]: ./#source-files-explained
 [Results]: ./#results
 [Credits]: ./#credits
+[most credible resource on the internet]: https://en.wikipedia.org/wiki/Antivirus_software#Signature-based_detection
