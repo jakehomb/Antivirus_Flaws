@@ -12,7 +12,10 @@ The code and content of this repository are intended for strictly educational pu
 - [Reason for writing]
 - [Signature-based AV Definition]
 - [My simplified understanding of how Anti-virus works]
+  - [Python styled pseudo code to illustrate]
 - [Typical means of obfuscation]
+  - [Encoding][Typical means of obfuscation]
+  - [Encryption][Typical means of obfuscation]
 - [Background information for my approach]
 - [Source files explained]
 - [Results]
@@ -81,3 +84,4 @@ print(scan(#FILENAME))
 [Credits]: ./#credits
 [most credible resource on the internet]: https://en.wikipedia.org/wiki/Antivirus_software#Signature-based_detection
 [Antivirus Flaws]: https://jakehomb.github.io/Antivirus_Flaws/
+[Python styled pseudo code to illustrate]: ./#python-styled-pseudo-code-to-illustrate
