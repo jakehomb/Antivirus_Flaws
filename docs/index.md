@@ -32,12 +32,31 @@ Looking at the [most credible resource on the internet], we can see that signatu
 
 ## My simplified understanding of how Anti-virus works:
 
+Moving to give my own understanding, I feel as though it is important to share the same concepts and vocabulary for the following terms.
+
+- **File**: A file is document that consists of a sequence of bytes. These files can be told to execute something (Like an application) or can be opened by something else to display content (Ex: Adobe reader opens up a pdf).
+- **Signature**: A signature is a string of bytes that have been reviewed by whatever company lists them as malicious and adds them to a Signature database.
+- **Anti-virus client**: An anti-virus client is a piece of software that pulls a copy of a signature database and can preform scans on a file or a set of files.
+
+Going off of this my understanding of signature based antivirus can be broken into 3 parts, only 2 of which are relevant for this document. Part 1 is the anti-virus client, Part 2 is the signature database which can be seen as some data structure of byte strings (each being a signature), and Part 3 is the upstream server from which the signature databases are pulled. In the following section, I will be writing up some code in python to give my best (oversimplified) rendition of how an anti-virus functions.
+
 #### Python styled pseudo code to illustrate:
+
 ```Python
-Placeholder
+signatureDB[] = [#SIGNATURE STRINGS]
+def scan(fileIn, ):
+	with open fileIn as scanFile:
+		for signature in signatureDB:
+			if signature in scanFile:
+				return ("Malware detected as " + signature)
+		return "Clean file, enjoy opening!"
+print(scan(#FILENAME))	
 ```
 
 ## Typical means of obfuscation:
+
+- **Encoding**: Encoding is the process of taking a section of hex in a file that is known to be the signature picked up by anti-virus systems and running it though an encoding scheme to get a set of bytes that do not match the initial signature, but can be decoded through the inverse operation and run as normal. To get a good understanding of this approach, I recommend the Cracking the Perimeter course from Offensive Security. The course gives a good look at how to set up a loop to do the encoding and decoding. That being said, a loop to decode needs to be on disk and this loop itself can be registered as a signature.
+- **Encryption**: Encryption is the process of encrypting the string of bytes against a key. Generally speaking, the whole of a file is encrypted and a decryption stub is used to decrypt the file in a similar method to encoding/decoding. The difference is that encoding helps you avoid some characters (such as NULL bytes) where encryption is intended to ensure data confidentiality.
 
 ## Background information for my approach:
 
