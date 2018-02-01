@@ -73,7 +73,7 @@ print(scan(#FILENAME))
 [Goal of project]: ./#goal-of-the-project
 [Reason for writing]: ./#reason-for-writing
 [Signature-based AV Definition]: ./#signature-based-av-definition
-[My simplified understanding of how Anti-virus works]: ./#my-simplified-understanding-of-how-anti-virus-work
+[My simplified understanding of how Anti-virus works]: ./#my-simplified-understanding-of-how-anti-virus-works
 [Typical means of obfuscation]: ./#typical-means-of-obfuscation
 [Background information for my approach]: ./#background-information-for-my-approach
 [Source files explained]: ./#source-files-explained
