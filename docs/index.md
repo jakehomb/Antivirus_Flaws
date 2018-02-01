@@ -100,3 +100,5 @@ Using the standard windows/shell_reverse_tcp payload in msfvenom to connect to m
 [most credible resource on the internet]: https://en.wikipedia.org/wiki/Antivirus_software#Signature-based_detection
 [Antivirus Flaws]: https://jakehomb.github.io/Antivirus_Flaws/
 [Python styled pseudo code to illustrate]: ./#python-styled-pseudo-code-to-illustrate
+[scramblePayload.py]: https://github.com/jakehomb/Antivirus_Flaws/blob/master/scramblePayload.py
+[AVBypass_POC.cpp]: https://github.com/jakehomb/Antivirus_Flaws/blob/master/AVBypass_Skeletonized.cpp
