@@ -43,15 +43,15 @@ def randPayload(hexString, chunkSize, varName):
             chosenList.append(key)
             print('string ' + varName + 'P' + str(key) + ' = \"' + fixedChunk[key] + '\";' )
     # Create the list that will be used to create the string* array 
-    arrList = [('string* ' + varName + 'Arr[] = { ')]
+    arrList = [('string* ' + varName + 'Arr[' + varName + 'ChunkCount] = { ')]
     for i in range(1, len(fixedChunk)+1, 1):
         if i < len(fixedChunk):
             arrList.append('&' + varName + 'P' + str(i) + ', ')
         else:
             arrList.append('&' + varName + 'P' + str(i) + ' };')
 
+    print('const static int ' + varName + 'ChunkCount = ' + str(len(fixedChunk)) + ';')
     print(''.join(arrList))
-    print('int ' + varName + 'ChunkCount = ' + str(len(fixedChunk)) + ';')
     print('int ' + varName + 'Len = ' + str(int(len(hexString)/2)) + ';')
 
 
