@@ -34,7 +34,7 @@
 #include <iostream>
 #include <Windows.h>
 #include <string>
-//#include <vector>
+#include <vector>
 #pragma warning(disable:4996)
 
 using namespace std;
