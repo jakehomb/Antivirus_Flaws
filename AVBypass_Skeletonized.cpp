@@ -92,7 +92,7 @@ public:
 				temp = PAYLOADNAMEArr[i]->c_str();
 				strcat(ptr, temp);
 			}
-			runShellcode(make_pair(ptr, PAYLOADSize));
+			runShellcode(make_pair(ptr, PAYLOADNAMELen));
 			free(ptr);
 		default:
 			cout << "[*] Invalid choice...";
