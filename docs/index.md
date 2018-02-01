@@ -17,6 +17,9 @@ The code and content of this repository are intended for strictly educational pu
   - [Encoding][Typical means of obfuscation]
   - [Encryption][Typical means of obfuscation]
 - [Background information for my approach]
+  - [Anatomy of a Portable Executable][Background information for my approach]
+  - [Variables in C++][Background information for my approach]
+  - [Compiler optimization and its limits][Background information for my approach]
 - [Source files explained]
 - [Results]
 - [Credits]
@@ -63,6 +66,36 @@ print(scan(#FILENAME))
 
 ## Background information for my approach:
 
+### Anatomy of a Portable Executable:
+
+A portable executable is a file format that is native to Windows based operating systems. Because we will be compiling the C++ code on Windows, we will be generating a .exe file that will be hosting our malicious code and passing execution to it. A full breakdown of the parts or "Sections" that make up a PE formatted file can be found [here][4]. The relevant sections for this method are the data sections.
+
+### Variables in C++:
+
+A variable in C++, specifically a string variable, is a pointer to the beginning of an array of characters that is read until it reaches a NULL character (\x00). Because of this, the msfvenom command should include some encoding to ensure that this character is removed or avoided in the payload. Aside from that baseline information we can say that generally when metasploit generates a payload formatted for a C type payload dumps the contents of the payload into one variable. When the source code is compiled with a compiler such as GCC or Visual Studio it will create a character array (a contiguous block of memory) and place the bytes in the order that they were in the literal string assigned to it. This leads to our problem with the signature detection. The bytes stored in order allow for easy definition of malicious code and thus generation of a signature.
+
+### Compiler optimization and its limits:
+
+It is generally understood when programming that any compiler that is worth using will not generate files exactly as you dictate via your code. Compilers look to find ways to optimize operations to give you the best performance (which is not always their end result). I have noticed that if you have 3 strings declared as {"DEF", "ABC", "GHI"} and you want a program that does nothing with them but print them in order, the compiler will not take the 3 strings and store them in the proper order or as one correctly ordered string. While this is good as this would likely lead to more trouble than it was worth, it gives way to what I feel is the easiest method of bypassing antivirus signatures entirely.
+
+## Breakdown of the method used:
+
+Reading the last 3 sections, the process is likely to be fairly obvious at this point. For illustration purposes, I will be using some 'variables' defined below.
+```
+- malicious-signature = 'ABCDEFGHIJ'
+- malicious-code = 'ABCDEFGHIJ'
+- string chunk1 = 'CD'
+- string chunk2 = 'IJ'
+- string chunk3 = 'EF'
+- string chunk4 = 'AB'
+- string chunk5 = 'GH'
+- string* chunkArr = { &chunk4, &chunk1, &chunk3, &chunk5, &chunk2 }
+- char* reassembled = new char[malicious_code.length()]
+```
+Note: This code will not compile as it is not formatted correctly, but we can gather the general idea from it.
+
+The signature found as malicious-signature matches exactly with malicious-code. However, if we were to exclude malicious-code from our source code and instead have the malicious-code broken down into smaller chunks and have them declared out of order, we would see the data section of our PE file read "CDIJEFABGH" which is not the same as the malicious-signature. Looking at the chunkArr, we see a string pointer array that has the pointers for each string stored in the proper order required to reassemble them. Following that, there is a char pointer named reassembled that will be a heap dynamic array that will be of the same length as the malicious code. Iterating through the chunkArr, we can dereference the pointers to get the values of the chunks and concatenate them into our heap chunkArr giving us our malicious-code back. With that, we have effectively broken the signature and used some pointers to allow us to reassemble without encryption. 
+
 ## Source files explained:
 
 **[scramblePayload.py]** - A script written in Python3 to take the output from msfvenom as stdin and convert it to the C++ code to be pasted in the skeletonized POC. Allows you to specify the chunk size and the variable name you want given. It takes -c for the chunkSize and -vn for the C++ variable name. It returns the following items:
@@ -88,6 +121,7 @@ Using the standard windows/shell_reverse_tcp payload in msfvenom to connect to m
 [1]: about
 [2]: https://www.offensive-security.com/information-security-training/cracking-the-perimeter/
 [3]: http://www.virustotal.com
+[4]: https://msdn.microsoft.com/en-us/library/windows/desktop/ms680547(v=vs.85).aspx
 [Goal of project]: ./#goal-of-the-project
 [Reason for writing]: ./#reason-for-writing
 [Signature-based AV Definition]: ./#signature-based-av-definition
