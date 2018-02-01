@@ -11,7 +11,7 @@ The code and content of this repository are intended for strictly educational pu
 - [Goal of project]
 - [Reason for writing this article]
 - [Signature-based AV Definition]
-- [My Simplified understanding of how they work]
+- [My simplified understanding of how Anti-virus works]
 - [Typical means of obfuscation]
 - [Background information for my approach]
 - [Source files explained]
@@ -73,7 +73,7 @@ print(scan(#FILENAME))
 [Goal of project]: ./#goal-of-the-project
 [Reason for writing this article]: ./#reason-for-writing-this-article
 [Signature-based AV Definition]: ./#signature-based-av-definition
-[My Simplified understanding of how they work]: ./#my-simplified-understanding-of-how-they-work
+[My simplified understanding of how Anti-virus works]: ./#my-simplified-understanding-of-how-anti-virus-work
 [Typical means of obfuscation]: ./#typical-means-of-obfuscation
 [Background information for my approach]: ./#background-information-for-my-approach
 [Source files explained]: ./#source-files-explained
