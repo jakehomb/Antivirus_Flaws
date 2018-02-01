@@ -67,12 +67,17 @@ print(scan(#FILENAME))
 
 ## Results:
 
+Using the standard windows/shell_reverse_tcp payload in msfvenom to connect to my localhost on port 4443 and encoding it with x86/shikata_ga_nai to avoid bytes "\x00\x0a\x0d", I dumped the results of the scramblePayload.py script into the skeletonized POC and updated the variable names to reflect the input code. Running the code I revceived a successful reverse shell. Taking this file and running it through [VirusTotal][3] the following result was had. This result shows that the method is successful in bypassing the virus signature that has been assigned to the windows/shell_reverse_tcp payload.
+
+![VirusTotalResult](MetRevShell.PNG)
+
 ## Credits:
 
 [//]: # "LINKS)"
 
 [1]: about
 [2]: https://www.offensive-security.com/information-security-training/cracking-the-perimeter/
+[3]: http://www.virustotal.com
 [Goal of project]: ./#goal-of-the-project
 [Reason for writing]: ./#reason-for-writing
 [Signature-based AV Definition]: ./#signature-based-av-definition
