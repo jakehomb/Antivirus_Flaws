@@ -9,7 +9,7 @@ The code and content of this repository are intended for strictly educational pu
 ## Table of Contents:
  
 - [Goal of project]
-- [Reason for writing this article]
+- [Reason for writing]
 - [Signature-based AV Definition]
 - [My simplified understanding of how Anti-virus works]
 - [Typical means of obfuscation]
@@ -71,7 +71,7 @@ print(scan(#FILENAME))
 [1]: about
 [2]: https://www.offensive-security.com/information-security-training/cracking-the-perimeter/
 [Goal of project]: ./#goal-of-the-project
-[Reason for writing this article]: ./#reason-for-writing-this-article
+[Reason for writing]: ./#reason-for-writing
 [Signature-based AV Definition]: ./#signature-based-av-definition
 [My simplified understanding of how Anti-virus works]: ./#my-simplified-understanding-of-how-anti-virus-work
 [Typical means of obfuscation]: ./#typical-means-of-obfuscation
