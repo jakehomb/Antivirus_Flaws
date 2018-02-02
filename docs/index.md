@@ -20,7 +20,7 @@ The code and content of this repository are intended for strictly educational pu
   - [Anatomy of a Portable Executable][Background information for my approach]
   - [Variables in C++][Background information for my approach]
   - [Compiler optimization and its limits][Background information for my approach]
-- [Breakdown of method used]
+- [Breakdown of the method used]
 - [Source files explained]
 - [Results]
 - [Credits]
@@ -129,7 +129,7 @@ Using the standard windows/shell_reverse_tcp payload in msfvenom to connect to m
 [My simplified understanding of how Anti-virus works]: ./#my-simplified-understanding-of-how-anti-virus-works
 [Typical means of obfuscation]: ./#typical-means-of-obfuscation
 [Background information for my approach]: ./#background-information-for-my-approach
-[Breakdown of method used]: ./#breakdown-of-method-used
+[Breakdown of the method used]: ./#breakdown-of-the-method-used
 [Source files explained]: ./#source-files-explained
 [Results]: ./#results
 [Credits]: ./#credits
