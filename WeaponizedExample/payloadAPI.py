@@ -13,13 +13,20 @@
 
 """
 
-from flask import Flask, request
-from flask_restful import Resource, Api, reqparse, abort
 from random import randrange
 import subprocess
 from binascii import unhexlify
 from base64 import b64encode, b64decode
 
+try:
+    from flask import Flask, request
+    from flask_restful import Resource, Api, reqparse, abort
+except:
+    from os import system
+    system('sudo pip3 install flask_restful')
+    system('sudo pip3 install flask')
+    from flask import Flask, request
+    from flask_restful import Resource, Api, reqparse, abort
 
 app = Flask(__name__)
 api = Api(app)
