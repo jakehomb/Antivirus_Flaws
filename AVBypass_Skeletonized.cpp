@@ -1,7 +1,7 @@
 
 /*
  * Author: 	Jake Homberg
- * File: 	BypassPOC.cpp
+ * File: 	AVBypass_Skeletonized.cpp
  * Date: 	1/30/2018
  *
  * Purpose: 	This file is a proof of concept to test a method of bypassing signature
@@ -32,7 +32,7 @@
  */ 		 
 
 #include <iostream>
-#include <Windows.h>
+#include <windows.h>
 #include <string>
 #pragma warning(disable:4996)
 
@@ -103,7 +103,7 @@ private:
 		For more than one payload, we will be adding cases to our switch in the 
 		getPayload() function.
 	*/	
-
+	//INSERTHERE
 };
 
 int main() {
